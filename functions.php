@@ -160,3 +160,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Load custom post types
+ */
+require 'cpt/index.php';
+
+/**
+ * Load custom api routes
+ */
+
+require 'api/index.php';

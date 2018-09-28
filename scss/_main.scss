@@ -1,1 +1,23 @@
+.has-small-padding {
+	padding: 1rem;
+}
+
+.has-medium-padding {
+	padding: 2rem;
+}
+
+.has-large-padding {
+	padding: 4rem;
+}
+
+.hero {
+	background-size: cover;
+	background-position: center;
+}
+
+.yellow-bar {
+	max-width: 50px;
+}
+
 @import 'nav/styles';
+@import 'form/styles';

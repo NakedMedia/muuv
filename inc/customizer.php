@@ -16,8 +16,6 @@ function leedo_customize_register( $wp_customize ) {
 	$wp_customize->remove_control('header_textcolor');
 	$wp_customize->remove_control("header_image");
 	$wp_customize->remove_control('display_header_text');
-	
-	$wp_customize->remove_section('static_front_page');
 
 	$wp_customize->remove_panel("widgets");
 

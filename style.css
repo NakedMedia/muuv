@@ -7,5 +7,29 @@
 /* License URI: LICENSE */
 /* Text Domain: leedo */
 /* Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready */
+.has-small-padding {
+  padding: 1rem; }
+
+.has-medium-padding {
+  padding: 2rem; }
+
+.has-large-padding {
+  padding: 4rem; }
+
+.hero {
+  background-size: cover;
+  background-position: center; }
+
+.yellow-bar {
+  max-width: 50px; }
+
 .navbar-item img {
   max-height: 3.75rem; }
+
+.select.is-max-width {
+  width: 100%; }
+  .select.is-max-width select {
+    width: 100%; }
+
+.input {
+  box-shadow: none; }
