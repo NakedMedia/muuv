@@ -81,9 +81,9 @@ $nav_menu_right_slug = get_term( get_nav_menu_locations()['nav-menu-right'], 'na
 
 <body <?php body_class(); ?>>
 	<div id="root">
-		<nav class="navbar is-transparent">
+		<nav class="navbar is-transparent container">
 		  <div class="navbar-brand">
-		    <a class="navbar-item" href="">
+		    <a class="navbar-item" href="/">
 		      <img src="<?=wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' )[0];?>" alt="Logo">
 		    </a>
 		    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
@@ -100,34 +100,34 @@ $nav_menu_right_slug = get_term( get_nav_menu_locations()['nav-menu-right'], 'na
 		    ?>
 		  </div>
 
-	      <div class="navbar-end">
-              <div class="navbar-item">
-                <div class="field is-grouped">
-                    <div class="control">
-                        <a class="button is-text" href="#">
-                          <span class="icon">
-                            <i class="fas fa-truck-moving"></i>
-                          </span>
-                          <span>Sign Up</span>
-                        </a>
-                    </div>
-                    <div class="control">
-                        <a class="button is-text" href="#">
-                          <span class="icon">
-                            <i class="fas fa-sign-in-alt"></i>
-                          </span>
-                          <span>Login</span>
-                        </a>
-                    </div>
-                </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+              <div class="control">
+                  <a class="button is-text" href="#">
+                    <span class="icon">
+                      <i class="fas fa-truck-moving"></i>
+                    </span>
+                    <span>Sign Up</span>
+                  </a>
               </div>
-              <div class="navbar-item">
-                <a class="button is-primary is-outlined" href="tel:<?= get_theme_mod('phone_number'); ?>">
-                  <span class="icon">
-                    <i class="fas fa-phone"></i>
-                  </span>
-                  <span><?= get_theme_mod('phone_number'); ?></span>
-                </a>
+              <div class="control">
+                  <a class="button is-text" href="#">
+                    <span class="icon">
+                      <i class="fas fa-sign-in-alt"></i>
+                    </span>
+                    <span>Login</span>
+                  </a>
               </div>
-            </div>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <a class="button is-primary has-text-secondary" href="tel:<?= get_theme_mod('phone_number'); ?>">
+            <span class="icon">
+              <i class="fas fa-phone"></i>
+            </span>
+            <span><?= get_theme_mod('phone_number'); ?></span>
+          </a>
+        </div>
+      </div>
 		</nav>

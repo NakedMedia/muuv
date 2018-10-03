@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.9.3"
+  },
+  "dependencies": {
+    "bulma": "^0.7.1"
   }
 }

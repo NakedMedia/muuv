@@ -120,7 +120,6 @@ add_action( 'widgets_init', 'leedo_widgets_init' );
  * Enqueue scripts and styles.
  */
 function leedo_scripts() {
-	wp_register_style('Bulma', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css');
 	wp_register_script('Font Awesome', 'https://use.fontawesome.com/releases/v5.1.0/js/all.js', null, null, true);
 
 	wp_enqueue_style('Bulma');

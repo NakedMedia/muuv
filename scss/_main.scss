@@ -1,3 +1,18 @@
+/*--- Custom Variables ---*/
+$blue: #304c87;
+$yellow: #f2a242;
+
+$primary: $blue;
+$secondary: $yellow;
+
+$input-radius: 0;
+
+@import '../node_modules/bulma/bulma';
+
+.subtitle {
+	margin-top: 0 !important;
+}
+
 .has-small-padding {
 	padding: 1rem;
 }
@@ -10,14 +25,38 @@
 	padding: 4rem;
 }
 
+.has-text-secondary {
+	color: $secondary !important;
+}
+
+.button.is-secondary {
+	background-color: $secondary;
+	color: $white;
+	border-color: $secondary;
+}
+
+.is-centered {
+	margin: auto;
+}
+
 .hero {
 	background-size: cover;
 	background-position: center;
 }
 
-.yellow-bar {
+.bar-secondary {
 	max-width: 50px;
+	height: 5px;
+	background-color: $secondary;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.bar-secondary.is-centered {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @import 'nav/styles';
 @import 'form/styles';
+@import 'landing/styles';
