@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package leado
+ * @package muuv
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function leado_jetpack_setup() {
+function muuv_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'leado_infinite_scroll_render',
+		'render'    => 'muuv_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -28,7 +28,7 @@ function leado_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details'    => array(
-			'stylesheet' => 'leado-style',
+			'stylesheet' => 'muuv-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -42,12 +42,12 @@ function leado_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'leado_jetpack_setup' );
+add_action( 'after_setup_theme', 'muuv_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function leado_infinite_scroll_render() {
+function muuv_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

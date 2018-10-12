@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package leado
+ * @package muuv
  */
 
 class CustomWalker extends Walker_Nav_Menu {

@@ -1,8 +1,8 @@
 <?php
 /**
- * leado Theme Customizer
+ * muuv Theme Customizer
  *
- * @package leado
+ * @package muuv
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function leado_customize_register( $wp_customize ) {
+function muuv_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 
 	$wp_customize->remove_control('header_textcolor');
@@ -20,7 +20,7 @@ function leado_customize_register( $wp_customize ) {
 	$wp_customize->remove_panel("widgets");
 
 
-	$wp_customize->add_section( 'leado_settings' , array(
+	$wp_customize->add_section( 'muuv_settings' , array(
 	    'title'      => 'Leedo Settings',
 	    'priority'   => 30,
 	) );
@@ -33,19 +33,19 @@ function leado_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control('phone_number_control', array(
 		'label'        => 'Phone Number',
-		'section'    => 'leado_settings',
+		'section'    => 'muuv_settings',
 		'settings'   => 'phone_number',
 		'type' => 'text'
 	) );
 }
-add_action( 'customize_register', 'leado_customize_register' );
+add_action( 'customize_register', 'muuv_customize_register' );
 
 /**
  * Render the site title for the selective refresh partial.
  *
  * @return void
  */
-function leado_customize_partial_blogname() {
+function muuv_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -54,14 +54,14 @@ function leado_customize_partial_blogname() {
  *
  * @return void
  */
-function leado_customize_partial_blogdescription() {
+function muuv_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function leado_customize_preview_js() {
-	wp_enqueue_script( 'leado-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+function muuv_customize_preview_js() {
+	wp_enqueue_script( 'muuv-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
-add_action( 'customize_preview_init', 'leado_customize_preview_js' );
+add_action( 'customize_preview_init', 'muuv_customize_preview_js' );
