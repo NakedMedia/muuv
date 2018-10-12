@@ -13,6 +13,10 @@ $input-radius: 0;
 	margin-top: 0 !important;
 }
 
+select.is-danger {
+	border-color: $danger;
+}
+
 .has-small-padding {
 	padding: 1rem;
 }
@@ -55,6 +59,13 @@ $input-radius: 0;
 .bar-secondary.is-centered {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@media screen and (max-width: $tablet) {
+	.is-centered-mobile {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @import 'nav/styles';

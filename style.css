@@ -6432,6 +6432,9 @@ label.panel-block {
 .subtitle {
   margin-top: 0 !important; }
 
+select.is-danger {
+  border-color: #ff3860; }
+
 .has-small-padding {
   padding: 1rem; }
 
@@ -6466,6 +6469,11 @@ label.panel-block {
 .bar-secondary.is-centered {
   margin-left: auto;
   margin-right: auto; }
+
+@media screen and (max-width: 769px) {
+  .is-centered-mobile {
+    margin-left: auto;
+    margin-right: auto; } }
 
 .navbar-item img {
   max-height: 3.75rem; }
