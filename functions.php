@@ -1,15 +1,15 @@
 <?php
 /**
- * leedo functions and definitions
+ * leado functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package leedo
+ * @package leado
  */
 
 show_admin_bar( false );
 
-if ( ! function_exists( 'leedo_setup' ) ) :
+if ( ! function_exists( 'leado_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -17,14 +17,14 @@ if ( ! function_exists( 'leedo_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function leedo_setup() {
+	function leado_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on leedo, use a find and replace
-		 * to change 'leedo' to the name of your theme in all the template files.
+		 * If you're building a theme based on leado, use a find and replace
+		 * to change 'leado' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'leedo', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'leado', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -46,11 +46,11 @@ if ( ! function_exists( 'leedo_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'nav-menu' => esc_html__( 'Nav Menu', 'leedo' ),
+			'nav-menu' => esc_html__( 'Nav Menu', 'leado' ),
 		) );
 
 		register_nav_menus( array(
-			'nav-menu-right' => esc_html__( 'Right Nav Menu', 'leedo' ),
+			'nav-menu-right' => esc_html__( 'Right Nav Menu', 'leado' ),
 		) );
 
 		/*
@@ -81,7 +81,7 @@ if ( ! function_exists( 'leedo_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'leedo_setup' );
+add_action( 'after_setup_theme', 'leado_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -90,52 +90,52 @@ add_action( 'after_setup_theme', 'leedo_setup' );
  *
  * @global int $content_width
  */
-function leedo_content_width() {
+function leado_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'leedo_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'leado_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'leedo_content_width', 0 );
+add_action( 'after_setup_theme', 'leado_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function leedo_widgets_init() {
+function leado_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'leedo' ),
+		'name'          => esc_html__( 'Sidebar', 'leado' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'leedo' ),
+		'description'   => esc_html__( 'Add widgets here.', 'leado' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'leedo_widgets_init' );
+add_action( 'widgets_init', 'leado_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function leedo_scripts() {
+function leado_scripts() {
 	wp_register_script('Font Awesome', 'https://use.fontawesome.com/releases/v5.1.0/js/all.js', null, null, true);
 
 	wp_enqueue_style('Bulma');
 	wp_enqueue_script('Font Awesome');
 
-	wp_enqueue_style( 'leedo-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'leado-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'leedo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'leado-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'leedo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'leado-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'leedo_scripts' );
+add_action( 'wp_enqueue_scripts', 'leado_scripts' );
 
 /**
  * Custom template tags for this theme.
